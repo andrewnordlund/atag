@@ -7,7 +7,8 @@ let principles = true;
 let guidelines = true;
 let sc = true;
 let notes = true;
-let hl = 2;
+let initHl = 3;
+let hl = initHl;
 let showImplementation = true;
 let showURL = true;
 let refURL = null;
@@ -37,7 +38,7 @@ let filters = {
 
 function init () {
 	if (dbug) console.log ("Initting");
-	cont = document.getElementById("cont");
+	cont = document.getElementById("contSection");
 	liveRegion = document.getElementById("liveRegion");
 
 	
@@ -230,7 +231,7 @@ function toggleFilter (e) {
 function genHTML () {
 	if (dbug) console.log ("Regening...");
 	cont.innerHTML = "";
-	hl = 2;
+	hl = initHl;
 	refURL = atagContents["base_url"];
 	implementURL = atagContents["implementation_base_url"];
 	for (let part in atagContents.parts) {
@@ -249,7 +250,6 @@ function createPart (atagPart, pNode) {
 			if (filters["infoLinkChk"].checked) createHTMLElement(document, "a", {"parentNode":partSect, "href":refURL + "#" + atagPart["url_fragment"], "textNode":refURL+"#"+atagPart["url_fragment"], "class":"infoLink", "target":"_blank", "rel":"noopener noreferrer"});
 			hl++;
 		}
-	
 		for (let p in atagPart["principles"]) {
 			createPrinciple(atagPart["principles"][p], partSect);
 		}
@@ -276,9 +276,11 @@ function createPrinciple (atagPrinciple, pNode) {
 			if (!gls && scs) gls = true;
 		}
 		if (filters["principleChk"].checked) hl--;
+		/*
 		if (!gls) {
 			principleSect.parentNode.removeChild(principleSect);
 		}
+		*/
 	}
 
 } // End of createPrinciple
@@ -319,10 +321,12 @@ function createGuideline (atagGuideline, pNode) {
 			}
 		}
 		if (filters["guidelineChk"].checked) hl--;
+		/*
 		if (!scs) {
 			// This Guideline has no Success Criteria to be shown.  Hide it.
 			guidelineSect.parentNode.removeChild(guidelineSect);
 		}
+		*/
 	return scs;
 	}
 } // End of createGuideline

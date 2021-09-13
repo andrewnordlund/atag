@@ -19,7 +19,7 @@ main {
 #filters {
 	grid-area: filters;
 }
-#cont {
+#contSection {
 	grid-area: content;
 	width: 100%;
 }
