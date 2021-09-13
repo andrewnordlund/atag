@@ -377,12 +377,10 @@ function createHTMLElement (creator, type, attribs) {
 	let iwin = window.top;
 	// idiv instanceof iwin.HTMLElement; // true
 	// Check for headings beyond h6
-	let ariaHeading = false;
 	let hRE = /h(\d+)/g;
 	let hLevel = hRE.exec(type);
 	if (hLevel) {
 		if (hLevel[1] > "6") {
-			ariaHeading = true;
 			type= "div";
 			attribs["role"] = "heading";
 			attribs["aria-level"] = hLevel[1];
