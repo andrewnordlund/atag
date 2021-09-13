@@ -383,6 +383,7 @@ function createHTMLElement (creator, type, attribs) {
 	if (hLevel) {
 		if (hLevel[1] > "6") {
 			ariaHeading = true;
+			type= "h6";
 			attribs["aria-level"] = hLevel[1];
 		}
 	}
