@@ -38,7 +38,7 @@ let filters = {
 
 function init () {
 	if (dbug) console.log ("Initting");
-	cont = document.getElementById("contSection");
+	cont = document.getElementById("cont");
 	liveRegion = document.getElementById("liveRegion");
 
 	
@@ -376,6 +376,17 @@ function createHTMLElement (creator, type, attribs) {
 	// From: http://stackoverflow.com/questions/26248599/instanceof-htmlelement-in-iframe-is-not-element-or-object
 	let iwin = window.top;
 	// idiv instanceof iwin.HTMLElement; // true
+	// Check for headings beyond h6
+	let ariaHeading = false;
+	let hRE = /h(\d+)/g;
+	let hLevel = hRE.exec(type);
+	if (hLevel) {
+		if (hLevel[1] > "6") {
+			ariaHeading = true;
+			attribs["aria-level"] = hLevel[1];
+		}
+	}
+
 	let newEl = creator.createElement(type);
 	for (let k in attribs) {
 		if (thisdbug) console.log ("Checking attrib " + k + ".");
