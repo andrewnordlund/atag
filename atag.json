@@ -128,15 +128,15 @@
 												"special_cases" : 
 													[
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Option to Render",
-										                        	        "description": "The authoring tool provides the option to render alternatives for the time-based media;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Option to Render",
+															"description": "The authoring tool provides the option to render alternatives for the time-based media;"
+				    										},
 														{
-										      	                          	"type": "at_least_one",
-										                	                "title": "User Agent Option",
-										                        	        "description": "Authors have the option to preview the time-based media in a user agent that is able to render the alternatives."
-	                            										}
+										      				  	"type": "at_least_one",
+															"title": "User Agent Option",
+															"description": "Authors have the option to preview the time-based media in a user agent that is able to render the alternatives."
+				    										}
 
 													]
 											}
@@ -274,35 +274,35 @@
 												"special_cases" : 
 													[
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Turn Off",
-										                        	        "description": "Authors are allowed to turn off the time limit before encountering it;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Turn Off",
+															"description": "Authors are allowed to turn off the time limit before encountering it;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Adjust",
-										                        	        "description": "Authors are allowed to adjust the time limit before encountering it over a wide range that is at least ten times the length of the default setting;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Adjust",
+															"description": "Authors are allowed to adjust the time limit before encountering it over a wide range that is at least ten times the length of the default setting;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Extend",
-										                        	        "description": "Authors are warned before time expires and given at least 20 seconds to extend the time limit with a simple action (e.g. \"press the space bar\"), and authors are allowed to extend the time limit at least ten times"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Extend",
+															"description": "Authors are warned before time expires and given at least 20 seconds to extend the time limit with a simple action (e.g. \"press the space bar\"), and authors are allowed to extend the time limit at least ten times"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Real-time Exception",
-										                        	        "description": "The time limit is a required part of a real-time event (e.g. a collaborative authoring system), and no alternative to the time limit is possible;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Real-time Exception",
+															"description": "The time limit is a required part of a real-time event (e.g. a collaborative authoring system), and no alternative to the time limit is possible;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Essential Exception",
-										                        	        "description": "The time limit is essential and extending it would invalidate the activity;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Essential Exception",
+															"description": "The time limit is essential and extending it would invalidate the activity;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "20 Hour Exception",
-										                        	        "description": "The time limit is longer than 20 hours."
-	                            										}
+										      					"type": "at_least_one",
+															"title": "20 Hour Exception",
+															"description": "The time limit is longer than 20 hours."
+				    										}
 
 													]
 											},
@@ -393,25 +393,25 @@
 												"special_cases" :
 													[
 														{
-										      	                        	"type": "all_true",
-										                	                "title": "All Editable Text",
-										                        	        "description": "Any text content that is editable by the editing-view is searchable (including alternative content);"
-	                            										},
+										      					"type": "all_true",
+															"title": "All Editable Text",
+															"description": "Any text content that is editable by the editing-view is searchable (including alternative content);"
+				    										},
 														{
-										      	                        	"type": "all_true",
-										                	                "title": "Match",
-										                        	        "description": "Matching results can be presented to authors and given focus;"
-	                            										},
+										      					"type": "all_true",
+															"title": "Match",
+															"description": "Matching results can be presented to authors and given focus;"
+				    										},
 														{
-										      	                        	"type": "all_true",
-										                	                "title": "No Match",
-										                        	        "description": "Authors are informed when no results are found;"
-	                            										},
+										      					"type": "all_true",
+															"title": "No Match",
+															"description": "Authors are informed when no results are found;"
+				    										},
 														{
-										      	                        	"type": "all_true",
-										                	                "title": "Two-way",
-										                        	        "description": "The search can be made forwards or backwards."
-	                            										}
+										      					"type": "all_true",
+															"title": "Two-way",
+															"description": "The search can be made forwards or backwards."
+				    										}
 														
 													]
 											}
@@ -472,15 +472,15 @@
 												"special_cases" : 
 													[
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "In-Market User Agent",
-										                        	        "description": "The preview renders content using a user agent that is in-market;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "In-Market User Agent",
+															"description": "The preview renders content using a user agent that is in-market;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "UAAG (Level A)",
-										                        	        "description": "The preview conforms to the User Agent Accessibility Guidelines 1.0 Level A"
-	                            										}																								]
+										      					"type": "at_least_one",
+															"title": "UAAG (Level A)",
+															"description": "The preview conforms to the User Agent Accessibility Guidelines 1.0 Level A"
+				    										}																								]
 											},
 											{												
 												"ref_id" : "A.3.7.2",
@@ -556,25 +556,25 @@
 												"special_cases" : 
 													[
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Described in the Documentation",
-										                        	        "description": "Use of the feature is explained in the authoring tool's documentation;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Described in the Documentation",
+															"description": "Use of the feature is explained in the authoring tool's documentation;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Described in the Interface",
-										                        	        "description": "Use of the feature is explained in the authoring tool user interface;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Described in the Interface",
+															"description": "Use of the feature is explained in the authoring tool user interface;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Platform Service",
-										                        	        "description": "The feature is a service provided by an underlying platform;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Platform Service",
+															"description": "The feature is a service provided by an underlying platform;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Not Used by Authors",
-										                        	        "description": "The feature is not used directly by authors (e.g. passing information to a platform accessibility service)."
-	                            										}
+										      					"type": "at_least_one",
+															"title": "Not Used by Authors",
+															"description": "The feature is not used directly by authors (e.g. passing information to a platform accessibility service)."
+				    										}
 													]
 											},
 											{
@@ -587,25 +587,25 @@
 												"special_cases" : 
 													[
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Described in the Documentation",
-										                        	        "description": "Use of the feature is explained in the authoring tool's documentation;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Described in the Documentation",
+															"description": "Use of the feature is explained in the authoring tool's documentation;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Described in the Interface",
-										                        	        "description": "Use of the feature is explained in the authoring tool user interface;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Described in the Interface",
+															"description": "Use of the feature is explained in the authoring tool user interface;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Platform Service",
-										                        	        "description": "The feature is a service provided by an underlying platform;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Platform Service",
+															"description": "The feature is a service provided by an underlying platform;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Not Used by Authors",
-										                        	        "description": "The feature is not used directly by authors (e.g. passing information to a platform accessibility service)."
-	                            										}
+										      					"type": "at_least_one",
+															"title": "Not Used by Authors",
+															"description": "The feature is not used directly by authors (e.g. passing information to a platform accessibility service)."
+				    										}
 													]
 											}
 									]
@@ -685,25 +685,25 @@
 												"special_cases" : 
 													[
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Accessible",
-										                        	        "description": "The content is accessible web content (WCAG) without author input;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Accessible",
+															"description": "The content is accessible web content (WCAG) without author input;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Prompting",
-										                        	        "description": "During the automatic generation process, authors are prompted for any required accessibility information (WCAG);"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Prompting",
+															"description": "During the automatic generation process, authors are prompted for any required accessibility information (WCAG);"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Automatic Checking",
-										                        	        "description": "After the automatic generation process, accessibility checking is automatically performed;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Automatic Checking",
+															"description": "After the automatic generation process, accessibility checking is automatically performed;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Checking Suggested",
-										                        	        "description": "After the automatic generation process, the authoring tool prompts authors to perform accessibility checking."
-	                            										}
+										      					"type": "at_least_one",
+															"title": "Checking Suggested",
+															"description": "After the automatic generation process, the authoring tool prompts authors to perform accessibility checking."
+				    										}
 													]
 											}
 										]
@@ -726,25 +726,25 @@
 												"special_cases" : 
 												[
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Preserve",
-										                        	        "description": " Accessibility information (WCAG) is preserved in the output;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Preserve",
+															"description": " Accessibility information (WCAG) is preserved in the output;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Warning",
-										                        	        "description": "Authors have the default option to be warned that accessibility information (WCAG) may be lost (e.g. when saving a vector graphic into a raster image format);"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Warning",
+															"description": "Authors have the default option to be warned that accessibility information (WCAG) may be lost (e.g. when saving a vector graphic into a raster image format);"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Automatic Checking",
-										                        	        "description": "After the transformation, accessibility checking is automatically performed;"
-	                            										},
+										      					"type": "at_least_one",
+															"title": "Automatic Checking",
+															"description": "After the transformation, accessibility checking is automatically performed;"
+				    										},
 														{
-										      	                        	"type": "at_least_one",
-										                	                "title": "Checking Suggested",
-										                        	        "description": "After the transformation, the authoring tool prompts authors to perform accessibility checking."
-	                            										}
+										      					"type": "at_least_one",
+															"title": "Checking Suggested",
+															"description": "After the transformation, the authoring tool prompts authors to perform accessibility checking."
+				    										}
 
 													]
 											},
@@ -859,20 +859,20 @@
 												"special_cases" : 
 													[
 														{
-										      	                        	"type": "all_true",
-										                	                "title": "No Generic or Irrelevant Strings",
-										                        	        "description": "Generic strings (e.g. \"image\") and irrelevant strings (e.g. the file name, file format) are not used as text alternatives;"
-	                            										},
+										      					"type": "all_true",
+															"title": "No Generic or Irrelevant Strings",
+															"description": "Generic strings (e.g. \"image\") and irrelevant strings (e.g. the file name, file format) are not used as text alternatives;"
+				    										},
 														{
-										      	                        	"type": "all_true",
-										                	                "title": "In-Session Repairs",
-										                        	        "description": "If the repair attempt occurs during an authoring session, authors have the opportunity to accept, modify, or reject the repair attempt prior to insertion of the text alternative into the content;"
-	                            										},
+										      					"type": "all_true",
+															"title": "In-Session Repairs",
+															"description": "If the repair attempt occurs during an authoring session, authors have the opportunity to accept, modify, or reject the repair attempt prior to insertion of the text alternative into the content;"
+				    										},
 														{
-										      	                        	"type": "all_true",
-										                	                "title": "Out-of-Session Repairs",
-										                        	        "description": "If the repair attempt occurs after an authoring session has ended, the repaired text alternatives are indicated during subsequent authoring sessions (if any) and authors have the opportunity to accept, modify, or reject the repair strings prior to insertion in the content."
-	                            										}
+										      					"type": "all_true",
+															"title": "Out-of-Session Repairs",
+															"description": "If the repair attempt occurs after an authoring session has ended, the repaired text alternatives are indicated during subsequent authoring sessions (if any) and authors have the opportunity to accept, modify, or reject the repair strings prior to insertion in the content."
+				    										}
 													]
 											},
 											{
@@ -885,15 +885,15 @@
 												"special_cases" : 
 													[
 														{
-										      	                        	"type": "all_true",
-										                	                "title": "Save and Suggest",
-										                        	        "description": "The text alternatives are automatically saved and suggested by the authoring tool, if the same non-text content is reused;"
-	                            										},
+										      					"type": "all_true",
+															"title": "Save and Suggest",
+															"description": "The text alternatives are automatically saved and suggested by the authoring tool, if the same non-text content is reused;"
+				    										},
 														{
-										      	                        	"type": "all_true",
-										                	                "title": "Edit Option",
-										                        	        "description": "The author has the option to edit or delete the saved text alternatives."
-	                            										}
+										      					"type": "all_true",
+															"title": "Edit Option",
+															"description": "The author has the option to edit or delete the saved text alternatives."
+				    										}
 													]
 											}
 									]
