@@ -23,6 +23,7 @@ In this JSON format the Success Criteria have been broken down further:
   * `at_least_one` - at least one of the special cases must apply 
   * `all_true` - all of the special cases must apply 
 * Notes - any other notes that accompany the Success Criterion
+* The Level of a Success Criterion is either A, AA, AA, or A,AA,AAA meaning the SC corresponds to the desired level of WCAG conformance.
 
 A full ATAG SC Entry looks like this:
 
