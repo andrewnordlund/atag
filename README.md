@@ -9,10 +9,10 @@ See the [ATAG Quick Reference](https://andrewnordlund.github.io/atag/atagscs.htm
 
 ## Structure
 
-The structure of the JSON file closely mirrors the WCAG Standard itself:
+The structure of the JSON file closely mirrors the ATAG Standard itself:
 
-* There are 2 Parts of WCAG
-* Each Part has Principles of WCAG
+* There are 2 Parts of ATAG
+* Each Part has Principles of ATAG
 * Each Principle has Guidelines
 * Each Guideline has Success Criteria
 
