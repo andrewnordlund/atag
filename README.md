@@ -1,6 +1,11 @@
 # ATAG Quick Reference as JSON
 This is meant to be be a mix of the portability of [WCAG as JSON](https://github.com/tenon-io/wcag-as-json) and usefulness of [How to Meet WCAG (Quickref Reference)](https://www.w3.org/WAI/WCAG21/quickref/), but for ATAG.
 
+## Important Links
+See the [ATAG Quick Reference](https://andrewnordlund.github.io/atag/atagscs.html) in action.
+
+[ATAG Quick Reference GitHub repo](https://github.com/andrewnordlund/atag/)
+
 
 ## Structure
 
