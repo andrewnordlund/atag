@@ -7,7 +7,8 @@ let principles = true;
 let guidelines = true;
 let sc = true;
 let notes = true;
-let hl = 2;
+let initHl = 3;
+let hl = initHl;
 let showImplementation = true;
 let showURL = true;
 let refURL = null;
@@ -230,7 +231,7 @@ function toggleFilter (e) {
 function genHTML () {
 	if (dbug) console.log ("Regening...");
 	cont.innerHTML = "";
-	hl = 2;
+	hl = initHl;
 	refURL = atagContents["base_url"];
 	implementURL = atagContents["implementation_base_url"];
 	for (let part in atagContents.parts) {
@@ -249,7 +250,6 @@ function createPart (atagPart, pNode) {
 			if (filters["infoLinkChk"].checked) createHTMLElement(document, "a", {"parentNode":partSect, "href":refURL + "#" + atagPart["url_fragment"], "textNode":refURL+"#"+atagPart["url_fragment"], "class":"infoLink", "target":"_blank", "rel":"noopener noreferrer"});
 			hl++;
 		}
-	
 		for (let p in atagPart["principles"]) {
 			createPrinciple(atagPart["principles"][p], partSect);
 		}
@@ -276,9 +276,11 @@ function createPrinciple (atagPrinciple, pNode) {
 			if (!gls && scs) gls = true;
 		}
 		if (filters["principleChk"].checked) hl--;
+		/*
 		if (!gls) {
 			principleSect.parentNode.removeChild(principleSect);
 		}
+		*/
 	}
 
 } // End of createPrinciple
@@ -319,10 +321,12 @@ function createGuideline (atagGuideline, pNode) {
 			}
 		}
 		if (filters["guidelineChk"].checked) hl--;
+		/*
 		if (!scs) {
 			// This Guideline has no Success Criteria to be shown.  Hide it.
 			guidelineSect.parentNode.removeChild(guidelineSect);
 		}
+		*/
 	return scs;
 	}
 } // End of createGuideline
@@ -372,6 +376,17 @@ function createHTMLElement (creator, type, attribs) {
 	// From: http://stackoverflow.com/questions/26248599/instanceof-htmlelement-in-iframe-is-not-element-or-object
 	let iwin = window.top;
 	// idiv instanceof iwin.HTMLElement; // true
+	// Check for headings beyond h6
+	let hRE = /h(\d+)/g;
+	let hLevel = hRE.exec(type);
+	if (hLevel) {
+		if (hLevel[1] > "6") {
+			type= "div";
+			attribs["role"] = "heading";
+			attribs["aria-level"] = hLevel[1];
+		}
+	}
+
 	let newEl = creator.createElement(type);
 	for (let k in attribs) {
 		if (thisdbug) console.log ("Checking attrib " + k + ".");

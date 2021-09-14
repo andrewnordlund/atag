@@ -19,7 +19,7 @@ main {
 #filters {
 	grid-area: filters;
 }
-#cont {
+#contSection {
 	grid-area: content;
 	width: 100%;
 }
@@ -50,6 +50,11 @@ p {
     overflow: hidden;
     position: absolute;
     width: 1px;
+}
+footer {
+	border-top: thin #808080 solid;
+	margin-top: 1.5em;
+	font-size: 85%;
 }
 /*
    This is from a font that I evidently don't have: font-awesome
