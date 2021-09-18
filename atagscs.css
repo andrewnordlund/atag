@@ -33,9 +33,11 @@ ol {
 p {
 	margin-bottom: 0.3em;
 }
-.infoLink, .implementingLink {
-	display: block;
+.linkUL li {
 	margin-bottom: 0.5em;
+	list-style:none;
+}
+.infoLink, .implementingLink {
 }
 .hide {
 	display: none;
@@ -76,9 +78,10 @@ a::after {
 		border-right: thin inset #C0C0C0;
 		border-bottom: thin inset #C0C0C0;
 	}
-	#filters {
-		position: fixed;
-		width: 20%;
+	#filters > div {
+		position: sticky;
+		top: 1em;
+		height: 30em;
+		overflow-y:scroll;
 	}
 }
-

@@ -246,6 +246,7 @@ function createPart (atagPart, pNode) {
 	} else {
 		if (filters["partChk"].checked) {
 			createHTMLElement(document, "h" + hl, {"parentNode":partSect, "class":"part", "textNode":"Part " + atagPart["ref_id"] + " - " + atagPart["title"]});
+			if (filters["infoLinkChk"].checked || filters["implementingLinkChk"].checked) createLinks(partSect, atagPart["url_fragment"]);
 			if (filters["implementingLinkChk"].checked) implementingURL = createHTMLElement (document, "a", {"parentNode":partSect, "href":implementURL + "#" + atagPart["url_fragment"], "textNode":"Implementing " + atagPart["ref_id"], "class":"implementingLink", "target":"_blank", "rel":"noopener noreferrer"});
 			if (filters["infoLinkChk"].checked) createHTMLElement(document, "a", {"parentNode":partSect, "href":refURL + "#" + atagPart["url_fragment"], "textNode":refURL+"#"+atagPart["url_fragment"], "class":"infoLink", "target":"_blank", "rel":"noopener noreferrer"});
 			hl++;
@@ -267,8 +268,7 @@ function createPrinciple (atagPrinciple, pNode) {
 	} else {
 		if (filters["principleChk"].checked) {
 			createHTMLElement(document, "h" + hl, {"parentNode":principleSect, "class":"principle", "textNode":"Principle " + atagPrinciple["ref_id"] + " - " + atagPrinciple["title"]});
-			if (filters["implementingLinkChk"].checked) implementingURL = createHTMLElement (document, "a", {"parentNode":principleSect, "href":implementURL + "#" + atagPrinciple["url_fragment"], "textNode":"Implementing " + atagPrinciple["ref_id"], "class":"implementingLink", "target":"_blank", "rel":"noopener noreferrer"});
-			if (filters["infoLinkChk"].checked) createHTMLElement(document, "a", {"parentNode":principleSect, "href":refURL + "#" + atagPrinciple["url_fragment"], "textNode":refURL+"#"+atagPrinciple["url_fragment"], "class":"infoLink", "target":"_blank", "rel":"noopener noreferrer"});
+			if (filters["infoLinkChk"].checked || filters["implementingLinkChk"].checked) createLinks(principleSect, atagPrinciple["url_fragment"]);
 			hl++;
 		}
 		for (let gl in atagPrinciple["guidelines"]) {
@@ -294,8 +294,7 @@ function createGuideline (atagGuideline, pNode) {
 	} else {
 		if (filters["guidelineChk"].checked) {
 			createHTMLElement(document, "h" + hl, {"parentNode":guidelineSect, "class":"guideline", "textNode":"Guideline " + atagGuideline["ref_id"] + " - " + atagGuideline["title"]});
-			if (filters["infoLinkChk"].checked) createHTMLElement(document, "a", {"parentNode":guidelineSect, "href":refURL + "#" + atagGuideline["url_fragment"], "textNode":refURL+"#"+atagGuideline["url_fragment"], "class":"infoLink", "target":"_blank", "rel":"noopener noreferrer"});
-			if (filters["implementingLinkChk"].checked) implementingURL = createHTMLElement (document, "a", {"parentNode":guidelineSect, "href":implementURL + "#" + atagGuideline["url_fragment"], "textNode":"Implementing " + atagGuideline["ref_id"], "class":"implementingLink", "target":"_blank", "rel":"noopener noreferrer"});
+			if (filters["infoLinkChk"].checked || filters["implementingLinkChk"].checked) createLinks(guidelineSect, atagGuideline["url_fragment"]);
 			if (filters["rationaleChk"].checked) createHTMLElement(document, "p", {"parentNode":guidelineSect, "class":"rationale", "textNode":"Rationale: " + atagGuideline["rationale"]});
 			if (atagGuideline["notes"] && filters["glnotesChk"].checked) {
 				hl++;
@@ -352,8 +351,7 @@ function createSuccessCriterion (atagSuccessCriterion, pNode) {
 				}
 			}
 			if (filters["levelChk"].checked) createHTMLElement(document, "p", {"parentNode":successCriterionSect, "class":"level", "textNode":"Level " + atagSuccessCriterion["level"]});
-			if (filters["infoLinkChk"].checked) successCriterionURL = createHTMLElement(document, "a", {"parentNode":successCriterionSect, "href":refURL + "#" + atagSuccessCriterion["url_fragment"], "textNode":refURL+"#"+atagSuccessCriterion["url_fragment"], "class":"infoLink", "target":"_blank", "rel":"noopener noreferrer"});
-			if (filters["implementingLinkChk"].checked) createHTMLElement (document, "a", {"parentNode":successCriterionSect, "href":implementURL + "#" + atagSuccessCriterion["url_fragment"], "textNode":"Implementing " + atagSuccessCriterion["ref_id"], "class":"implementingLink", "target":"_blank", "rel":"noopener noreferrer"});
+			if (filters["infoLinkChk"].checked || filters["implementingLinkChk"].checked) createLinks(successCriterionSect, atagSuccessCriterion["url_fragment"]);
 			if (filters["scnotesChk"].checked && atagSuccessCriterion["notes"]) {
 				hl++;
 				let successCriterionNotesSect = createHTMLElement(document, "section", {"parentNode":successCriterionSect, "class":"successCriterionSect"});
@@ -368,6 +366,19 @@ function createSuccessCriterion (atagSuccessCriterion, pNode) {
 	}
 } // End of createSuccessCriterion
 
+function createLinks (pNode, urlFragment) {
+	let newUl = createHTMLElement(document, "ul", {"parentNode": pNode, "class":"linkUL"});
+
+	if (filters["infoLinkChk"].checked) {
+		let newLi =createHTMLElement(document, "li", {"parentNode":newUl});
+		createHTMLElement(document, "a", {"parentNode":newLi, "href":refURL + "#" + urlFragment, "textNode":refURL+"#"+urlFragment, "class":"infoLink", "target":"_blank", "rel":"noopener noreferrer"});
+	}
+	if (filters["implementingLinkChk"].checked) {
+		let newLi =createHTMLElement(document, "li", {"parentNode":newUl});
+		createHTMLElement(document, "a", {"parentNode":newLi, "href":implementURL + "#" + urlFragment, "textNode":implementURL+"#"+urlFragment, "class":"infoLink", "target":"_blank", "rel":"noopener noreferrer"});
+	}
+
+} // End of createLinks
 
 function createHTMLElement (creator, type, attribs) {
 	let thisdbug = (((arguments.length == 4 &&arguments[3] != null && arguments[3] != undefined) || dbug == true) ? true : false);
