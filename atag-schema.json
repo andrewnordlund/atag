@@ -1,50 +1,81 @@
 {
 	"type": "object",
 	"$schema": "http://json-schema.org/draft-03/schema",
-	"id": "http://jsonschema.net",
+	"id": "https://andrewnordlund.github.io/atag/atag-schema.json",
+	"title" : "ATAG as JSON",
 	"description": "A JSON representation of ATAG 2.0",
 	"properties": {
+		"title" : {
+			"description": "The title of the document",
+			"type" : "string"
+		},
+		"description" : {
+			"description": "Description of the document",
+			"type": "string"
+		},
+		"version" : {
+			"description" : "The version of ATAG this document describes",
+			"type" : "number"
+		},
+		"url" : {
+			"description" : "URL of ATAG",
+			"type" : "string"
+		},
+		"base_url" : {
+			"description" : "Base URL for ATAG",
+			"type" : "string"
+		},
+		"implementation_base_url" : {
+			"description" : "Base URL for the Implementing ATAG document",
+			"type" : "string"
+		},
+		"parts" : {
+
+			"type" : "array",
+		},
+
+
 		"type": "object",
-			"properties": {
-				"required": [
-					"ref_id",
-					"title",
-					"url",
-					"description",
-					"guidelines"
-				],
-				"ref_id": {
-					"type": "string",
-					"description": "Unique numeric identifier for the Principle",
-					"enum": [
-						"1",
-						"2",
-						"3",
-						"4"
-					]
-				},
-				"title": {
-					"type": "string",
-					"description": "Title for the Principle",
-					"enum": [
-						"Perceivable",
-						"Operable",
-						"Understandable",
-						"Robust"
-					]
-				},
-				"url": {
-					"type": "string",
-					"description": "Fully-qualified URI at which you can find information about this Principle"
-				},
-				"description": {
-					"type": "string",
-					"description": "Text description of the Principle"
-				},
-				"guidelines": {
-					"type": "array",
-					"description": "Array of guidelines which apply to the specific principle",
-					"properties": {
+		"properties": {
+			"required": [
+				"ref_id",
+				"title",
+				"url",
+				"description",
+				"guidelines"
+			],
+			"ref_id": {
+				"type": "string",
+				"description": "Unique numeric identifier for the Principle",
+				"enum": [
+					"1",
+					"2",
+					"3",
+					"4"
+				]
+			},
+			"title": {
+				"type": "string",
+				"description": "Title for the Principle",
+				"enum": [
+					"Perceivable",
+					"Operable",
+					"Understandable",
+					"Robust"
+				]
+			},
+			"url": {
+				"type": "string",
+				"description": "Fully-qualified URI at which you can find information about this Principle"
+			},
+			"description": {
+				"type": "string",
+				"description": "Text description of the Principle"
+			},
+			"guidelines": {
+				"type": "array",
+				"description": "Array of guidelines which apply to the specific principle",
+				"properties": {
 						"required": [
 							"ref_id",
 							"title",
