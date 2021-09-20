@@ -51,7 +51,18 @@
 				},
 				"notes" : {
 					"type" : "array",
-					"description" : "Notes pertaining to the specific Part"
+					"description" : "Notes pertaining to the specific Part",
+					"properties": {
+						"required" : ["title", "description"],
+						"title": {
+							"type" : "string",
+							"description" : "Title of note"
+						},
+						"description" : {
+							"type": "string",
+							"description": "Full text of the note"
+						}
+					}
 				},
 				"principles" : {
 					"type" : "array",
@@ -77,7 +88,15 @@
 						},
 						"notes" : {
 							"type" : "array",
-							"description" : "Notes about the principle"
+							"description" : "Notes about the principle",
+							"properties": {
+								"required" : ["content"],
+								"content": {
+									"type": "string",
+									"description": "Full text of the note"
+								}
+							}
+
 						},
 						"guidelines": {
 							"type": "array",
@@ -154,7 +173,7 @@
 												"required" : ["content"],
 												"content": {
 													"type": "string",
-													"description": "Full text of the note(s)"
+													"description": "Full text of the note"
 												}
 											}
 										},
