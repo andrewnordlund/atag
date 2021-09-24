@@ -651,54 +651,54 @@
 			]
 		},
 		"principles" : 
-				[
-					{
-						"ref_id" : "B.1",
-						"title" : "Fully automatic processes produce accessible content",
-						"url_fragment" : "principle_b1",
-						"guidelines" : 
-							[
-								{
-									"ref_id" : "B.1.1",
-									"title" : "Ensure that automatically-specified content is accessible.",
-									"rationale" : "If authoring tools automatically produce web content that includes accessibility problems (WCAG), then this will impose additional repair tasks on authors.",
-									"url_fragment" : "gl_b11",
-									"notes" : null,
-									"success_criteria" : 
-										[
-											{
-												"ref_id" : "B.1.1.1",
-												"title" : "Content Auto-Generation After Authoring Sessions (WCAG)",
-												"description" : "The authoring tool does not automatically generate web content after the end of an authoring session, or, authors can specify that the content be accessible web content (WCAG).",
-												"level" : "A,AA,AAA",
-												"url_fragment" : "sc_b111",
-												"notes" : [{"content" : "This success criterion applies only to automatic processes specified by the authoring tool developer. It does not apply when author actions prevent generation of accessible web content (WCAG)."}],
-												"special_cases" : null
-											},
-											{
-												"ref_id" : "B.1.1.2",
-												"title" : "Content Auto-Generation After Authoring Sessions (WCAG)",
-												"description" : "The authoring tool does not automatically generate web content after the end of an authoring session, or, authors can specify that the content be accessible web content (WCAG).",
-												"level" : "A,AA,AAA",
-												"url_fragment" : "sc_b112",
-												"notes" : [{"content" : "Automatic generation includes automatically selecting templates for authors."},{"content" : "This success criterion applies only to automatic processes specified by the authoring tool developer. It does not apply when author actions prevent generation of accessible web content (WCAG)."}],
-												"special_cases" : 
-													[
-														{
-										      					"type": "at_least_one",
-															"title": "Accessible",
-															"description": "The content is accessible web content (WCAG) without author input;"
-				    										},
-														{
-										      					"type": "at_least_one",
-															"title": "Prompting",
-															"description": "During the automatic generation process, authors are prompted for any required accessibility information (WCAG);"
-				    										},
-														{
-										      					"type": "at_least_one",
-															"title": "Automatic Checking",
-															"description": "After the automatic generation process, accessibility checking is automatically performed;"
-				    										},
+			[
+				{
+					"ref_id" : "B.1",
+					"title" : "Fully automatic processes produce accessible content",
+					"url_fragment" : "principle_b1",
+					"guidelines" : 
+						[
+							{
+								"ref_id" : "B.1.1",
+								"title" : "Ensure that automatically-specified content is accessible.",
+								"rationale" : "If authoring tools automatically produce web content that includes accessibility problems (WCAG), then this will impose additional repair tasks on authors.",
+								"url_fragment" : "gl_b11",
+								"notes" : null,
+								"success_criteria" : 
+									[
+										{
+											"ref_id" : "B.1.1.1",
+											"title" : "Content Auto-Generation After Authoring Sessions (WCAG)",
+											"description" : "The authoring tool does not automatically generate web content after the end of an authoring session, or, authors can specify that the content be accessible web content (WCAG).",
+											"level" : "A,AA,AAA",
+											"url_fragment" : "sc_b111",
+											"notes" : [{"content" : "This success criterion applies only to automatic processes specified by the authoring tool developer. It does not apply when author actions prevent generation of accessible web content (WCAG)."}],
+											"special_cases" : null
+										},
+										{
+											"ref_id" : "B.1.1.2",
+											"title" : "Content Auto-Generation After Authoring Sessions (WCAG)",
+											"description" : "The authoring tool does not automatically generate web content after the end of an authoring session, or, authors can specify that the content be accessible web content (WCAG).",
+											"level" : "A,AA,AAA",
+											"url_fragment" : "sc_b112",
+											"notes" : [{"content" : "Automatic generation includes automatically selecting templates for authors."},{"content" : "This success criterion applies only to automatic processes specified by the authoring tool developer. It does not apply when author actions prevent generation of accessible web content (WCAG)."}],
+											"special_cases" : 
+												[
+													{
+										      				"type": "at_least_one",
+														"title": "Accessible",
+														"description": "The content is accessible web content (WCAG) without author input;"
+				    									},
+													{
+										      				"type": "at_least_one",
+														"title": "Prompting",
+														"description": "During the automatic generation process, authors are prompted for any required accessibility information (WCAG);"
+				    									},
+													{
+										      				"type": "at_least_one",
+														"title": "Automatic Checking",
+														"description": "After the automatic generation process, accessibility checking is automatically performed;"
+				    									},
 														{
 										      					"type": "at_least_one",
 															"title": "Checking Suggested",
