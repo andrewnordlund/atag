@@ -1,9 +1,9 @@
-# ATAG Quick Reference as JSON
-This is meant to be be a mix of the portability of [WCAG as JSON](https://github.com/tenon-io/wcag-as-json) but for ATAG.
+# ATAG as JSON
+This is meant to be like [WCAG as JSON](https://github.com/tenon-io/wcag-as-json) but for ATAG.
 
 ## Relevant Links
 * [atag-as-json - npm](https://www.npmjs.com/package/atag-as-json)
-* [ATAG Quick Reference GitHub repo](https://github.com/andrewnordlund/atag/)
+* [ATAG Quick Reference GitHub repo](https://github.com/andrewnordlund/atag-quick-ref/)
 
 
 ## Structure
