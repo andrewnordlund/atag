@@ -1,0 +1,26 @@
+{
+  "name": "atag-as-json",
+  "version": "0.2.0",
+  "description": "ATAG as JSON",
+  "main": "atag.json",
+  "homepage": "https://github.com/andrewnordlund/atag",
+  "keywords": [
+    "atag",
+    "accessibility"
+  ],
+  "author": "Andrew Nordlund <andrew.nordlund@gmail.com>",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/andrewnordlund/atag.git"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon",
+    "lint": "eslint **/*.js"
+  },
+  "bugs": {
+    "url": "https://github.com/andrewnordlund/atag/issues"
+  },
+  "license": "MIT"
+}
