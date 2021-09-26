@@ -1,10 +1,9 @@
 # ATAG Quick Reference as JSON
-This is meant to be be a mix of the portability of [WCAG as JSON](https://github.com/tenon-io/wcag-as-json) and usefulness of [How to Meet WCAG (Quickref Reference)](https://www.w3.org/WAI/WCAG21/quickref/), but for ATAG.
+This is meant to be be a mix of the portability of [WCAG as JSON](https://github.com/tenon-io/wcag-as-json) but for ATAG.
 
-## Important Links
-See the [ATAG Quick Reference](https://andrewnordlund.github.io/atag/atagscs.html) in action.
-
-[ATAG Quick Reference GitHub repo](https://github.com/andrewnordlund/atag/)
+## Relevant Links
+* [atag-as-json - npm](https://www.npmjs.com/package/atag-as-json)
+* [ATAG Quick Reference GitHub repo](https://github.com/andrewnordlund/atag/)
 
 
 ## Structure
@@ -12,7 +11,7 @@ See the [ATAG Quick Reference](https://andrewnordlund.github.io/atag/atagscs.htm
 The structure of the JSON file closely mirrors the ATAG Standard itself:
 
 * There are 2 Parts of ATAG
-* Each Part has Principles of ATAG
+* Each Part has the 2 Principles of WCAG (Perceivable, Operable, Understandable, and robust)
 * Each Principle has Guidelines
 * Each Guideline has Success Criteria
 
